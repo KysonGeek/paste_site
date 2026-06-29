@@ -1,0 +1,23 @@
+[Unit]
+Description=paste.qixin.ch - simple txt paste site
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/app/paste_site
+Environment=HOST=127.0.0.1
+Environment=PORT=8088
+Environment=NOTES_DIR=/opt/app/paste_site/notes
+ExecStart=/usr/bin/python3 /opt/app/paste_site/app.py
+Restart=on-failure
+RestartSec=2
+
+# 基础加固
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/app/paste_site/notes
+
+[Install]
+WantedBy=multi-user.target
