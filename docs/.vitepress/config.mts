@@ -5,6 +5,9 @@ export default defineConfig({
   title: 'paste',
   description: '极简文本中转站 — 访问 /任意名字 打开全屏文本框,内容变动时自动保存。',
 
+  // GitHub Pages 项目站点部署在 /<repo>/ 子路径下
+  base: '/paste_site/',
+
   themeConfig: {
     nav: [
       { text: '快速开始', link: '/guide/getting-started' },
