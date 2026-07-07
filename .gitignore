@@ -4,3 +4,8 @@ notes/
 __pycache__/
 *.pyc
 *.tmp
+
+# VitePress 介绍站
+docs/node_modules/
+docs/.vitepress/cache/
+docs/.vitepress/dist/
