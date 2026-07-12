@@ -21,6 +21,8 @@ python3 app.py
 | `HOST` | `0.0.0.0` | 监听地址 |
 | `PORT` | `8000` | 监听端口 |
 | `NOTES_DIR` | `./notes` | txt 文件存放目录 |
+| `MAX_BODY` | `10485760`(10MB) | 单次 POST 字节上限,超出返回 413;需与 Caddy `request_body max_size` 一致 |
+| `MAX_FILES` | `30` | txt 文件数量上限,满员后新建返回 403,已有文件仍可更新 |
 
 ## 部署
 

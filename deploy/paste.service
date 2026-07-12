@@ -8,6 +8,9 @@ WorkingDirectory=/opt/app/paste_site
 Environment=HOST=127.0.0.1
 Environment=PORT=8088
 Environment=NOTES_DIR=/opt/app/paste_site/notes
+# 可选:单次 POST 字节上限(与 Caddy request_body max_size 保持一致)及 txt 文件数量上限
+#Environment=MAX_BODY=10485760
+#Environment=MAX_FILES=30
 ExecStart=/usr/bin/python3 /opt/app/paste_site/app.py
 Restart=on-failure
 RestartSec=2
